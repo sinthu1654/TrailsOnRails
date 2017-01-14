@@ -1,15 +1,13 @@
-<!-- Created by Sinthujan - 2013046; Map Created by Tharindu - 2013231 (Not working) -->
+<!-- Created by Sinthujan - 2013046 -->
 
 <div class="row">
     <center>
         <div id="location_map" class="location_map"></div>
-        <!-- <script>
-        //Created by Tharindu - 2013231 - Not working
-
+        <script>
           function initMap() {
-            var uluru = "'['. $row['Latitude'] . ',' . $row['Longitude'] . ', .']'";
+            var uluru = {lat: <?php echo $row["Latitude"]; ?>, lng: <?php echo $row["Longitude"]; ?>};
             var map = new google.maps.Map(document.getElementById('location_map'), {
-              zoom: 4,
+              zoom: 15,
               center: uluru
             });
             var marker = new google.maps.Marker({
@@ -18,29 +16,9 @@
             });
           }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7NS87nWmxU01dp9bbCWSvu8Bo_xPCsKY&callback=initMap"/>
-        
-        <?php
-        //$query = mysql_query("SELECT latitude, longitude FROM user u INER JOIN village v ON u.village = v.id")or die(mysql_error());
-        //while($row = mysql_fetch_array($query)) {
-            //$name = $row['user_name'];
-            //$lat = $row['lattitude'];
-            //$lon = $row['longitude'];
-            //$desc = $row['desc'];
-            //'<b>$name</b>
-
-            //echo("addMarker($lat, $lon <br />');\n");
-        //} ?>
-
-        //center = bounds.getCenter();
-        //map.fitBounds(bounds); 
-     
-        //$sql = "SELECT * FROM location WHERE Latitude  = '".$latitude."'";
-        //$result = $conn->query($sql); 
-    
-        //if ($result->num_rows > 0) { 
-        
-        //while($row = $result->fetch_assoc()) { --> 
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCmwlc2qJP1UPjfv__fjnJs2d7ftXmVAI&callback=initMap">
+        </script>
     </center>
 </div>
 <br>

@@ -18,7 +18,8 @@ $(document).ready(function(){
         
         if(username=="sand"&&password=="pass"){ 
             $.ajax({
-                 type: "POST", url:"https://trailsonrails.000webhostapp.com/php/login_handler.php",//url:"http://localhost/TrailsOnRails/php/login_handler.php", 
+                 type: "POST", url:"http://localhost/TrailsOnRails/php/login_handler.php", 
+                 //type: "POST", url:"https://trailsonrails.000webhostapp.com/php/login_handler.php",
                  data:{login:"login" ,username:username}, 
                  success: 
                  function(data){ 
@@ -32,7 +33,8 @@ $(document).ready(function(){
     $(".logout").click(function(){   
         
         $.ajax({
-                 type: "POST", url:"https://trailsonrails.000webhostapp.com/php/logout.php",//url:"http://localhost/TrailsOnRails/php/logout.php",  
+                 type: "POST", url:"http://localhost/TrailsOnRails/php/logout.php", 
+                 //type: "POST", url:"https://trailsonrails.000webhostapp.com/php/logout.php", 
                  success: 
                  function(data){  
                      window.location.reload();

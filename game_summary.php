@@ -61,7 +61,7 @@
                 include("php/db.php");
                 $conn = getConnection();
 
-                $sql = "INSERT INTO id523957_trails_on_rails.comment (TripId, UserId, CommentDesc, Timestamp, Rating) 
+                $sql = "INSERT INTO trails_on_rails.comment (TripId, UserId, CommentDesc, Timestamp, Rating) 
                     VALUES ('1','1','".$comment."','".$timestamp."','".$rating."');";
 
                 $exeSQL = mysql_query($sql) or @$error=mysql_errno();

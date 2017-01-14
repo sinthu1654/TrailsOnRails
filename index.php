@@ -7,6 +7,14 @@
         include("php/templates/headers/head.php"); 
         head("Home");
     ?>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_DP12Wn3ZolXXg59qLON6u");
+       })();
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -73,17 +81,43 @@
     </div>
     <br>
 
-    <!--<div class="row">
-        <div id="link_to_game" class="buttonlink b_center">Go to game</div>
-        <script type="text/javascript">
-            document.getElementById("link_to_game").onclick = function () {
-                location.href = "game_home.php";
-            };
-        </script>
-    </div>-->
     <div class="row">
         <div id="link_to_game" class="buttonlink b_center" onclick="gotoGame('1')">Go to game</div>   
     </div>
+    <br>
+
+    <!-- Newsletters Created by Sinthujan - 2013046 -->
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Newsletters</h4>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-md-12 p_description">
+            <p>Need to keep updated on upcoming events? Subscribe to our newsletters.</p>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-md-12">
+            <section class="flexbox">  
+                <div class="stretch">
+                    <input class="trip_code_textfield" type="text" id="email" name="email" placeholder="Your Email">
+                </div>
+                <div class="normal">   
+                    <input class="buttonlink b" type="submit" id="subscribe_btn" name="subscribe_btn" value="Subscribe"> 
+                </div>    
+            </section> 
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("subscribe_btn").onclick = function () {
+            //Retrieve values 
+            var to_email = document.getElementById("email").value;
+            document.getElementById("email").value = "";
+            var message = "This is a test newsletter from Trails On Rails";
+            emailjs.send("default_service","template_MzeOEPaf",{to_email: to_email, message_html: message}); 
+        };       
+    </script>
 
     <div class="row">
         <div class="footer">

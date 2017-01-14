@@ -22,7 +22,7 @@
         include("php/db.php");
         $conn = getConnection();
 
-        $sql = "INSERT INTO id523957_trails_on_rails.booking (UserId, TripId, TripCode, TripDate, Class, Seat, PaymentMethod, CardNo, PaymentStatus) 
+        $sql = "INSERT INTO trails_on_rails.booking (UserId, TripId, TripCode, TripDate, Class, Seat, PaymentMethod, CardNo, PaymentStatus) 
             VALUES ('1','".$tripID."','".$tripCode."','".$date_time."','".$class."','".$num_seats."','".$pay_method."','".$card_no."','1');";
 
         $exeSQL = mysql_query($sql) or @$error=mysql_errno();
