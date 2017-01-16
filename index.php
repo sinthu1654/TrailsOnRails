@@ -69,6 +69,13 @@
     </div>
 
     <div class="row">
+        <center>
+            <iframe height="315" src="https://www.youtube.com/embed/96yLr3Vt9JA" frameborder="0" allowfullscreen></iframe>
+        </center>
+        <p class="p_description" align="center">Source: Shri Gajanan Tours</p>
+    </div><br>
+
+    <div class="row">
         <div class="col-md-12">
             <h4>Rules of Treasure Hunt</h4>
         </div>

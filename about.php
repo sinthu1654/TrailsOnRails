@@ -82,7 +82,7 @@
             <p>With Trails On Rails, we ensure that you will experience all of these in our classic trains. Comfortable seats, air conditioning and a menu of tasty snacks and cool drinks will bring the romance and excitement back to rail travel.</p> 
         </div>
     </div> 
-    
+
     <div class="row">
         <div class="footer">
             <hr><center>2016</center>

@@ -45,10 +45,47 @@ $(document).ready(function(){
     $(".back_button").click(function(){  
       window.history.back();
     });  
-    $(".trip_list_item").click(function(){  
+    $(".tripList_favrt_add").click(function(){       
+        var selected =jQuery(this).attr("id").substring(4);  
+        $.ajax({
+            type: "POST",
+            url:"http://localhost/TrailsOnRails/php/favourite_list.php", 
+            data:{favourite:"add" ,tripname:selected},               
+            success:              
+            function(data){      
+                document.getElementById("add_"+selected).style.display = 'none';         
+                document.getElementById("rem_"+selected).style.display = 'block';
+            }
+        });  
+    });  
+    $(".tripList_favrt_rem").click(function(){  
+        var selected =jQuery(this).attr("id").substring(4); 
+        $.ajax({
+            type: "POST",
+            url:"http://localhost/TrailsOnRails/php/favourite_list.php", 
+            data:{favourite:"rem" ,tripname:selected},               
+            success:              
+            function(data){                               
+                document.getElementById("rem_"+selected).style.display = 'none';       
+                document.getElementById("add_"+selected).style.display = 'block';
+        
+            }
+        });    
+    });  
+    $(".trip_list_item_link").click(function(){  
       var selected=jQuery(this).attr("id").substring(7);
          window.location.replace("trip_details.php?id="+selected);
-    });  
+    });     
+     $("#gam_proceed").click(function(){           
+         $.ajax({
+            type: "POST",
+            url:"http://localhost/TrailsOnRails/php/gamescore.php",  
+            success:              
+            function(data){    
+                 window.location.replace("game_home.php"); 
+            }
+        });          
+    });   
 });
 
 

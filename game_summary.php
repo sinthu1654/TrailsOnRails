@@ -108,12 +108,7 @@
     <br>
 
     <div class="row">
-        <div id="link_to_game" class="alt_buttonlink alt_b">Proceed</div>
-        <script type="text/javascript">
-            document.getElementById("link_to_game").onclick = function () {
-                location.href = "game_home.php";
-            };
-        </script>
+        <div id="gam_proceed" class="alt_buttonlink alt_b">Proceed</div>
     </div>
     </center>
 

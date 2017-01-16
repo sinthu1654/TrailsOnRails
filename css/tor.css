@@ -491,3 +491,21 @@ textarea {
     opacity: 0.6;
     float: right;
 }
+
+iframe {
+    width: 100%;
+}
+
+.tripList_favrt_add {
+    color: #009688;
+    float: right; 
+    font-size: 120%; 
+    cursor: pointer;
+}
+
+.tripList_favrt_rem {
+    color: #009688;
+    float: right; 
+    font-size: 120%;  
+    cursor: pointer;   
+}  

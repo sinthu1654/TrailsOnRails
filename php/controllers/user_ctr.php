@@ -1,5 +1,5 @@
 <?php 
-//Created by Sinthujan - 2013046
+//Created by Sinthujan - 2013046; Edited by Sandaroo - 2013197
 
 include("php/db.php");
 
@@ -25,6 +25,17 @@ function getUser($id){
 /* Get visited locations of user */
 function getVisitedLocation($userid, $tripid) {
 
+}
+
+function get_fav_list(){
+      if(isset($_SESSION["favourite"])){                                            
+          foreach($_SESSION["favourite"] as $x => $x_value) {
+              echo $x;
+              echo "<br>";
+          } 
+      }else{
+          echo "<center>no favourite places</center>";
+      } 
 }
 
 ?>
